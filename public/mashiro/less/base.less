@@ -18,13 +18,19 @@ img {
 vertical-align: middle;
 }
 
+body,html {
+  height: 100%;
+}
 
 header {
-  z-index: 999;
   > .navbar {
     height: 50px;
     background-color: @main-color;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 
     > p {
       text-align: center;

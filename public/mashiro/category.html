@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/category.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="" class="fa fa-arrow-left"></a>
+        <form>
+            <input type="search" placeholder="请输入要搜索的商品">
+        </form>
+        <a href="" class="fa fa-search"></a>
+    </div>
+</header>
+
+<div class="main">
+    <div class="left">
+        <ul>
+            <li>
+                <a href="#">Test</a>
+            </li>
+            <li>
+                <a href="#">Test</a>
+            </li>
+            <li>
+                <a href="#">Test</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="right">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="images/brand1.png" alt="">
+                            <p>耐克</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="images/brand2.png" alt="">
+                            <p>耐克</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="images/brand3.png" alt="">
+                            <p>耐克</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="images/brand4.png" alt="">
+                            <p>耐克</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="images/brand5.png" alt="">
+                            <p>耐克</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="images/brand6.png" alt="">
+                            <p>耐克</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<footer>
+    <div class="tab">
+        <ul>
+            <li>
+                <a href="index.html" class="fa fa-home">
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.html" class="fa fa-bars">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="fa fa-shopping-cart">
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="fa fa-user">
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script id="categoryLeft" type="text/html">
+    {{each rows as value}}
+    <li left-id="{{value.id}}">
+        <a href="#">{{value.categoryName}}</a>
+    </li>
+    {{/each}}
+</script>
+
+<script id="categoryRight" type="text/html">
+    {{each rows as value}}
+    <div class="mui-col-xs-4">
+        <a href="#">
+            <img src="{{value.brandLogo}}" alt="">
+            <p>{{value.brandName}}</p>
+        </a>
+    </div>
+    {{/each}}
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>
